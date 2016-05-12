@@ -50,7 +50,7 @@ def zapisi_tabelo(slovarji, imena_polj, ime_datoteke):
             writer.writerow(slovar)
 
 
-zanri=['Alternative','Avantgarde','Industrial','Black','Death','Doom','Post','Progressive','Stoner','Heavy','Math','Gothic','Sludge']
+zanri=['Alternative','Avantgarde','Industrial','Black','Death','Doom','Post-metal','Power','Symphonic','Progressive','Stoner','Heavy','Math','Gothic','Sludge','Folk']
 for zanr in zanri:
     shrani('http://www.metalstorm.net/bands/albums_top.php?album_style=' + zanr, zanr + '.html')
 
@@ -60,19 +60,21 @@ for zanr in zanri:
          print("pridem do sm", v)
          #print(v.read())
          for line in v:
-             bend = re.findall('''<b><a href=/bands/band.php\?band_id=\d+&\w+=[-#&;ÿöä:ô()ÖăåáA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*>([-#&;ÿöä:ô()Ö'ă%åáA-Za-z0-9 _.,!?"'/$\t\s\+\w-]*)</a></b>''', line, flags=re.DOTALL)
+             bend = re.findall('''<b><a href=/bands/band.php\?band_id=\d+&\w+=[-#&;ÿöä:ô()ÖăåáA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*>([-#&;ÿēöä:ô()Ö'ă%åáA-Za-z0-9 _.,!?"'/$\t\s\+\w-]*)</a></b>''', line, flags=re.DOTALL)
              po_vrsti = re.findall('''<span class=dark>(\d+\.)</span>''', line, flags=re.DOTALL)
-             album = re.findall('''<a href=/bands/album.php\?album_id=\d+>([-\[\]#&;ÿöä:ô()ÖăåáA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*)</a> <span class=dark>\(\d+\)</span></td>''', line, flags=re.DOTALL)
-             leto = re.findall('''<a href=/bands/album.php\?album_id=\d+>[-\[\]#&;ÿöä:ô()ÖăåáA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*</a> <span class=dark>(\(\d+\))</span></td>''', line, flags=re.DOTALL)
+             album = re.findall('''<a href=/bands/album.php\?album_id=\d+>([-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*)</a> <span class=dark>\(\d+\)</span></td>''', line, flags=re.DOTALL)
+             leto = re.findall('''<a href=/bands/album.php\?album_id=\d+>[-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*</a> <span class=dark>(\(\d+\))</span></td>''', line, flags=re.DOTALL)
              ocena = re.findall('''<a href=/bands/rating.php\?album_id=\d+>(\d+\.?\d+)</a>''', line, flags=re.DOTALL)
              st_glasov = re.findall('''<span class=dark>\| (\d+)</span>''', line, flags=re.DOTALL)
              if po_vrsti!= []:
                  slovar['vrstni_red'].append(po_vrsti)
+               #  print(po_vrsti)
              if bend != []:
                  slovar['avtorji'].append(bend)
                  slovar['podzvrsti'].append(zanr)
              if album != []:
                  slovar['albumi'].append(album)
+                # print(album)
              if ocena != []:
                  slovar['ocene'].append(ocena)
              if st_glasov != []:
@@ -96,7 +98,7 @@ with open('Podatki.csv','w+') as csvfile:
     print(csv)
     napisi = csv.DictWriter(csvfile, fieldnames=oznake)
     napisi.writeheader()
-    for i in range(954):
+    for i in range(len(slovar['albumi'])):
         napisi.writerow({'vrstni_red': str((slovar['vrstni_red'][i])[0]),
                          'albumi': str((slovar['albumi'][i])[0]),
                          'avtorji' : str((slovar['avtorji'][i])[0]),
@@ -104,4 +106,14 @@ with open('Podatki.csv','w+') as csvfile:
                          'podzvrsti' : (slovar['podzvrsti'][i]),
                          'ocene' : str((slovar['ocene'][i])[0]),
                          'st_glasov' : str((slovar['st_glasov'][i])[0])})
+    
+with open('povp_na_leto.csv','w+') as csvfile:
+    oznake = ['leta','ocene']
+    napisi = csv.DictWriter(csvfile, fieldnames=oznake)
+    napisi.writeheader()
+    for i in range(len(slovar['leta'])):
+        napisi.writerow({'leta' : str((slovar['leta'][i])[0]),
+                         'ocene' : str((slovar['ocene'][i])[0])})
+        
+    
     
