@@ -50,21 +50,20 @@ slovar = {'vrstni_red':[],'album':[],'leto':[],'avtor':[],'podzvrst':[], 'ocena'
 slovar2 = {'avtor':[], 'podzvrst':[], 'drzava':[]}
 
 # tole je treba izvest samo enkrat, dokler podatki2 ni dobro narejena
-for i in range(1,9001):
+for i in range(1,100):
     shrani('http://www.metalstorm.net/bands/band.php?band_id=' + str(i) + '&bandname=', str(i) + '.html')
     with open (str(i) + '.html','r',encoding='utf8') as v:
         zanrilist = []
         for line in v:
             bend = re.findall('''([-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*) - Metal Storm</title>''', line, flags=re.DOTALL)
             zanr = re.findall('''<a href=index.php\?b_where=s.style&b_what=[^>]*> ?([-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*)</a>''', line, flags=re.DOTALL)
-            drzava = re.findall('''<a href=index.php\?b_where=p.country&b_what=\w*>([-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*)</a></td>''', line, flags=re.DOTALL)
+            drzava = re.findall('''<a href=index.php\?b_where=p.country&b_what=[-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*>([-\[\]#&; Âiöšēäš:ô()Â;ÖšēăáÂA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*)</a></td>''', line, flags=re.DOTALL)
             if bend != []:
                 slovar2['avtor'].append(bend)
             if zanr != []:
                 zanrilist.append(zanr)
             if drzava != []:
                 slovar2['drzava'].append(drzava)
-                #print(zanrilist)
         slovar2['podzvrst'].append(zanrilist)
     v.close()
     os.remove(str(i) + '.html')
@@ -72,8 +71,7 @@ for i in range(1,9001):
 
 for zanr in zanri:
     with open(zanr + '.html','r',encoding='utf-8') as v:
-         #print("pridem do sm", v)
-         #print(v.read())
+
          for line in v:
              bend = re.findall('''<b><a href=/bands/band.php\?band_id=\d+&\w+=[-#&;ÿöä:ô()ÖăåáA-Za-z0-9' _%.,!?"'/$\t\s\+\w]*>([-#&;ÿēöä:ô()Ö'ă%åáA-Za-z0-9 _.,!?"'/$\t\s\+\w-]*)</a></b>''', line, flags=re.DOTALL)
              po_vrsti = re.findall('''<span class=dark>(\d+\.)</span>''', line, flags=re.DOTALL)
@@ -103,6 +101,7 @@ print("albumov je" + str(len(slovar['album'])))
 print("let je" + str(len(slovar['leto'])))
 print("ocena je" + str(len(slovar['ocena'])))
 print("glasov glasov je" + str(len(slovar['st_glasov'])))
+print("DRZAV" + str(len(slovar2['drzava'])))
 
 print("torej, nek random album je", slovar['avtor'][544], slovar['podzvrst'][544],
       slovar['album'][544], slovar['ocena'][544], slovar['vrstni_red'][544], slovar['leto'][544])
@@ -122,13 +121,13 @@ with open('Podatki.csv','w+') as csvfile:
                          'ocena' : str((slovar['ocena'][i])[0]),
                          'st_glasov' : str((slovar['st_glasov'][i])[0])})
 with open('Podatki2.csv','w+') as csvfile:
-    oznake = ['avtor', 'podzvrst']
+    oznake = ['avtor', 'podzvrst', 'drzava']
     print(csv)
     napisi = csv.DictWriter(csvfile, fieldnames=oznake)
     napisi.writeheader()
     for i in range(len(slovar2['avtor'])):
         for a in range(len(slovar2['podzvrst'][i])):
-            napisi.writerow({'avtor': str((slovar2['avtor'][i][0])),
+            napisi.writerow({'avtor': str(slovar2['avtor'][i][0]),
                              'podzvrst': str(slovar2['podzvrst'][i][a][0]),
                              'drzava':str(slovar2['drzava'][i][0])})
 

@@ -1,18 +1,184 @@
-avtor,podzvrst
-Nightwish,Gothic metal
-Nightwish,Symphonic power metal
-Nightwish,Symphonic metal
-Iced Earth,Heavy metal
-Iced Earth,US power metal
-Vanden Plas,Power metal
-Vanden Plas,Progressive metal
-Within Temptation,Gothic metal
-Within Temptation,Symphonic metal
-Virgin Steele,Heavy metal
-Virgin Steele,Symphonic metal
-Therion,Death metal
-Therion,Symphonic metal
-Porcupine Tree,Progressive rock
-Porcupine Tree,Progressive metal
-Yngwie Malmsteen,Neoclassical power metal
-Vader,Death metal
+avtor,podzvrst,drzava
+Nightwish,Gothic metal,Finland
+Nightwish,Symphonic power metal,Finland
+Nightwish,Symphonic metal,Finland
+Iced Earth,Heavy metal,USA
+Iced Earth,US power metal,USA
+Vanden Plas,Power metal,Germany
+Vanden Plas,Progressive metal,Germany
+Within Temptation,Gothic metal,The Netherlands
+Within Temptation,Symphonic metal,The Netherlands
+Virgin Steele,Heavy metal,USA
+Virgin Steele,Symphonic metal,USA
+Therion,Death metal,Sweden
+Therion,Symphonic metal,Sweden
+Porcupine Tree,Progressive rock,United Kingdom
+Porcupine Tree,Progressive metal,United Kingdom
+Yngwie Malmsteen,Neoclassical power metal,Sweden
+Vader,Death metal,Poland
+Vanishing Point,Progressive metal,Australia
+Vanishing Point,Symphonic power metal,Australia
+Vintersorg,Black metal,Sweden
+Vintersorg,Folk metal,Sweden
+Vintersorg,Progressive metal,Sweden
+Vomitory,Death metal,Sweden
+Opeth,Extreme progressive metal,Sweden
+Opeth,Progressive metal,Sweden
+Opeth,Progressive rock,Sweden
+Rage,Heavy metal,Germany
+Rammstein,Industrial metal,Germany
+Rhapsody Of Fire,Symphonic power metal,Italy
+Royal Hunt,Symphonic power metal,Denmark
+Queens Of The Stone Age,Stoner metal,USA
+Queens Of The Stone Age,Stoner rock,USA
+Impaled,Deathgrind ,USA
+Impaled,Goregrind ,USA
+Impaled,Death metal,USA
+Ulver,Black metal,Norway
+Ulver,Folk metal,Norway
+Ulver,Electronic Avantgarde ,Norway
+Pain Of Salvation,Progressive metal,Sweden
+Pain Of Salvation,Progressive rock,Sweden
+Adagio,Progressive metal,France
+Adagio,Symphonic power metal,France
+After Forever,Symphonic gothic metal,The Netherlands
+After Forever,Symphonic progressive metal,The Netherlands
+Angtoria,Symphonic metal,United Kingdom
+Amon Amarth,Melodic death metal,Sweden
+Amorphis,Death metal,Finland
+Amorphis,Folk metal,Finland
+Amorphis,Progressive metal,Finland
+Amorphis,Melodic death metal,Finland
+Amorphis,Melodic death metal,Finland
+Skyfire,Extreme power metal,Sweden
+Anathema,Death doom metal,United Kingdom
+Anathema,Doom metal,United Kingdom
+Anathema,Atmospheric rock,United Kingdom
+Ancient Rites,Viking black metal,Belgium
+Andromeda,Progressive metal,Sweden
+Angel Dust,Thrash metal,Germany
+Angel Dust,Power metal,Germany
+Angra,Progressive power metal,Brazil
+Annihilator,Thrash metal,Canada
+Annihilator,Heavy metal,Canada
+Annihilator,Thrash metal,Canada
+Anorexia Nervosa,Industrial metal,France
+Anorexia Nervosa,Symphonic black metal,France
+Anthrax,Thrash metal,USA
+Anthrax,Heavy metal,USA
+Anthrax,Thrash metal,USA
+WarCry,Power metal,Spain
+Loudness,Hard rock,Japan
+Loudness,Heavy metal,Japan
+Double Dealer,Heavy metal,Japan
+X Japan,Power metal,Japan
+Avalanch,Heavy metal,Spain
+Avalanch,Power metal,Spain
+Rotten Sound,Grindcore,Finland
+Arch Enemy,Gothenburg metal,Sweden
+Aria,Heavy metal,Russia
+Ark,Heavy metal,Norway
+Ark,Progressive metal,Norway
+At The Gates,Melodic death metal,Sweden
+At The Gates,Gothenburg metal,Sweden
+Avantasia,Symphonic power metal,Germany
+Avulsed,Brutal death metal,Spain
+Bal-Sagoth,Symphonic black metal,United Kingdom
+Bal-Sagoth,Power metal,United Kingdom
+Bathory,First wave of black metal,Sweden
+Bathory,Viking black metal,Sweden
+Behemoth,Black metal,Poland
+Behemoth,Blackened death metal,Poland
+Behemoth,Death metal,Poland
+Black Label Society,Heavy metal,USA
+Black Sabbath,Heavy metal,United Kingdom
+Black Sabbath,Hard rock,United Kingdom
+Black Sabbath,Doom metal,United Kingdom
+Blind Guardian,Power metal,Germany
+Blind Guardian,Speed metal,Germany
+Bloodbath,Death metal,Sweden
+Borknagar,Melodic black metal,Norway
+Borknagar,Progressive black metal,Norway
+Bruce Dickinson,Heavy metal,United Kingdom
+Primal Fear,Power metal,Germany
+Pantera,Heavy metal,USA
+Pantera,Groove thrash metal,USA
+Pantera,Groove metal ,USA
+Paradise Lost,Death doom metal,United Kingdom
+Paradise Lost,Gothic metal,United Kingdom
+Paradise Lost,Electro gothic metal,United Kingdom
+Paradise Lost,Gothic metal,United Kingdom
+Iron Maiden,New wave of British heavy metal,United Kingdom
+Iron Maiden,Heavy metal,United Kingdom
+In Flames,Gothenburg metal,Sweden
+In Flames,Alternative metal,Sweden
+Type O Negative,Gothic metal,USA
+Type O Negative,Doom metal,USA
+Tristania,Symphonic gothic metal,Norway
+Tristania,Gothic metal,Norway
+To/Die/For,Suomi metal,Finland
+Threshold,Progressive metal,United Kingdom
+Theatre Of Tragedy,Gothic metal,Norway
+Theatre Of Tragedy,Gothic industrial metal,Norway
+Candlemass,Epic doom metal,Sweden
+Cannibal Corpse,Death metal,USA
+Cathedral,Doom metal,United Kingdom
+Cathedral,Stoner metal,United Kingdom
+Celtic Frost,First wave of black metal,Switzerland
+Celtic Frost,Thrash metal,Switzerland
+Celtic Frost,Avantgarde metal,Switzerland
+Charon,Death metal,Finland
+Charon,Suomi metal,Finland
+Children Of Bodom,Extreme power metal,Finland
+Concerto Moon,Power metal,Japan
+Cradle Of Filth,Death metal,United Kingdom
+Cradle Of Filth,Symphonic black metal,United Kingdom
+Cradle Of Filth,Extreme gothic metal,United Kingdom
+Cradle Of Filth,Symphonic metal,United Kingdom
+Crematory,Gothic metal,Germany
+Crematory,Death metal,Germany
+Cryptopsy,Death metal,Canada
+Cryptopsy,Brutal death metal,Canada
+Cryptopsy,Technical death metal,Canada
+The Wounded,Gothic metal,The Netherlands
+The Wounded,Atmospheric rock,The Netherlands
+Judas Priest,Heavy metal,United Kingdom
+Judas Priest,Hard rock,United Kingdom
+Dark Funeral,Black metal,Sweden
+Dark Tranquillity,Gothenburg metal,Sweden
+Darkane,Death metal,Sweden
+Darkane,Thrash metal,Sweden
+Darkthrone,Death metal,Norway
+Darkthrone,Black metal,Norway
+Darkthrone,Crust punk ,Norway
+Darkthrone,Heavy metal,Norway
+Death,Death metal,USA
+Death,Progressive death metal,USA
+Death,Progressive thrash metal,USA
+Deicide,Death metal,USA
+Demons And Wizards,Heavy metal,USA
+Demons And Wizards,Power metal,USA
+Dimmu Borgir,Black metal,Norway
+Dimmu Borgir,Symphonic black metal,Norway
+Devin Townsend,Industrial progressive metal,Canada
+Devin Townsend,Progressive metal,Canada
+Dio,Heavy metal,USA
+Edenbridge,Symphonic metal,Austria
+Edenbridge,Power metal,Austria
+Edenbridge,Progressive metal,Austria
+Dream Evil,Heavy metal,Sweden
+Dream Evil,Power metal,Sweden
+Edguy,Power metal,Germany
+Dream Theater,Progressive metal,USA
+Dying Fetus,Brutal death metal,USA
+Dying Fetus,Deathgrind ,USA
+Dying Fetus,Technical death metal,USA
+Emperor,Black metal,Norway
+Emperor,Symphonic black metal,Norway
+Ensiferum,Extreme folk metal,Finland
+Entwine,Suomi metal,Finland
+Enslaved,Viking black metal,Norway
+Enslaved,Progressive black metal,Norway
+Evergrey,Progressive metal,Sweden
+Evergrey,Power metal,Sweden
+Freedom Call,Power metal,Germany
